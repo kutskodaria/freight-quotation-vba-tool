@@ -24,7 +24,7 @@ Manual quotation workflows typically cost freight forwarders 15–20 minutes per
 4. **Data Masking & Privacy Protection:** To prevent the accidental disclosure of internal company margins or base costs, the export script uses array targeting to isolate and print **only the final customer price ($3,700)**, ensuring absolute commercial confidentiality.
 
    <p align="center">
-  <img src="./04_generated_pdf_quotation.png" width="700">
+  <img src="./04_generated_pdf_quotation.png" width="600">
 </p>
 
 ---
@@ -56,6 +56,6 @@ Manual quotation workflows typically cost freight forwarders 15–20 minutes per
 4. **Защита конфиденциальности:** Чтобы предотвратить случайное разглашение внутренней маржи или себестоимости, скрипт экспорта выделяет и выводит в PDF **только финальную цену для клиента ($3,700)**, обеспечивая полную коммерческую тайну.
 
    <p align="center">
-  <img src="./04_generated_pdf_quotation.png" width="700">
+  <img src="./04_generated_pdf_quotation.png" width="600">
 </p>
    
