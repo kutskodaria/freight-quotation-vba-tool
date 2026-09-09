@@ -30,13 +30,13 @@ Manual quotation workflows typically cost freight forwarders 15–20 minutes per
 
 ## SQL Scripts and VBA Macro
 
-All SQL scripts used to create the tariff database and populate it with freight rates and the VBA macro that connects Excel to MySQL and calculates freight rates are in the [`sql/`](./sql) folder:
+All SQL scripts used to create the tariff database and populate it with freight rates and the VBA macro that connects Excel to MySQL and calculates freight rates are in the [`sql-and-vba-codes/`](./sql-and-vba-codes) folder:
 
 | File | Description |
 |------|-------------|
-| [`01_create_tables.sql`](./sql/01_create_tables.sql) | Creates the `freight_tariffs` table |
-| [`02_insert_data.sql`](./sql/02_insert_data.sql) | Inserts sample freight rates for different routes and container types |
-| [`03_calculation_macro_vba.bas`](./vba/03_calculation_macro_vba.bas) | VBA code for automated quotation, margin scoring, and PDF export |
+| [`01._create_tables.sql`](./sql/01_create_tables.sql) | Creates the `freight_tariffs` table |
+| [`02._insert_data.sql`](./sql/02_insert_data.sql) | Inserts sample freight rates for different routes and container types |
+| [`03._calculation_macro_vba.bas`](./vba/03_calculation_macro_vba.bas) | VBA code for automated quotation, margin scoring, and PDF export |
 
 ---
 ---
@@ -73,10 +73,10 @@ All SQL scripts used to create the tariff database and populate it with freight 
 
 ## SQL-скрипты и VBA-макрос
 
-Все SQL-скрипты для создания базы данных с тарифами и их заполнения и VBA-макрос, который подключает Excel к MySQL и рассчитывает стоимость фрахта, находятся в папке [`sql/`](./sql):
+Все SQL-скрипты для создания базы данных с тарифами и их заполнения и VBA-макрос, который подключает Excel к MySQL и рассчитывает стоимость фрахта, находятся в папке [`sql-and-vba-codes/`](./sql-and-vba-codes):
 
 | Файл | Описание |
 |------|----------|
-| [`01_create_tables.sql`](./sql/01_create_tables.sql) | Создание таблицы `freight_tariffs` |
-| [`02_insert_data.sql`](./sql/02_insert_data.sql) | Вставка примеров тарифов по маршрутам и типам контейнеров |
-| [`03_calculation_macro_vba.bas`](./vba/03_calculation_macro_vba.bas) | VBA-код для автоматического расчёта котировки, скоринга маржи и экспорта в PDF |
+| [`01._create_tables.sql`](./sql/01_create_tables.sql) | Создание таблицы `freight_tariffs` |
+| [`02._insert_data.sql`](./sql/02_insert_data.sql) | Вставка примеров тарифов по маршрутам и типам контейнеров |
+| [`03._calculation_macro_vba.bas`](./vba/03_calculation_macro_vba.bas) | VBA-код для автоматического расчёта котировки, скоринга маржи и экспорта в PDF |
