@@ -34,9 +34,9 @@ All SQL scripts used to create the tariff database and populate it with freight 
 
 | File | Description |
 |------|-------------|
-| [`01._create_tables.sql`](./sql/01._create_tables.sql) | Creates the `freight_tariffs` table |
-| [`02._insert_data.sql`](./sql/02._insert_data.sql) | Inserts sample freight rates for different routes and container types |
-| [`03._calculation_macro_vba.bas`](./vba/03._calculation_macro_vba.bas) | VBA code for automated quotation, margin scoring, and PDF export |
+| [`01._create_tables.sql`](./sql-and-vba-codes/01._create_tables.sql) | Creates the `freight_tariffs` table |
+| [`02._insert_data.sql`](./sql-and-vba-codes/02._insert_data.sql) | Inserts sample freight rates for different routes and container types |
+| [`03._calculation_macro_vba.bas`](./sql-and-vba-codes/03._calculation_macro_vba.bas) | VBA code for automated quotation, margin scoring, and PDF export |
 
 ---
 ---
@@ -77,6 +77,6 @@ All SQL scripts used to create the tariff database and populate it with freight 
 
 | Файл | Описание |
 |------|----------|
-| [`01._create_tables.sql`](./sql/01._create_tables.sql) | Создание таблицы `freight_tariffs` |
-| [`02._insert_data.sql`](./sql/02._insert_data.sql) | Вставка примеров тарифов по маршрутам и типам контейнеров |
-| [`03._calculation_macro_vba.bas`](./vba/03._calculation_macro_vba.bas) | VBA-код для автоматического расчёта котировки, скоринга маржи и экспорта в PDF |
+| [`01._create_tables.sql`](./sql-and-vba-codes/01._create_tables.sql) | Создание таблицы `freight_tariffs` |
+| [`02._insert_data.sql`](./sql-and-vba-codes/02._insert_data.sql) | Вставка примеров тарифов по маршрутам и типам контейнеров |
+| [`03._calculation_macro_vba.bas`](./sql-and-vba-codes/03._calculation_macro_vba.bas) | VBA-код для автоматического расчёта котировки, скоринга маржи и экспорта в PDF |
