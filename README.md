@@ -21,19 +21,37 @@ Manual quotation workflows typically cost freight forwarders 15–20 minutes per
   <img src="./02_calculated_lead_score.png" width="700">
 </p>
    
-4. **Data Masking & Privacy Protection:** To prevent the accidental disclosure of internal company margins or base costs, the export script uses array targeting to isolate and print **only the final customer price ($3,700)**, ensuring absolute commercial confidentiality.
+3. **Data Masking & Privacy Protection:** To prevent the accidental disclosure of internal company margins or base costs, the export script uses array targeting to isolate and print **only the final customer price ($3,700)**, ensuring absolute commercial confidentiality.
 
    <p align="center">
   <img src="./04_generated_pdf_quotation.png" width="600">
 </p>
 
+
+## SQL Scripts
+
+All SQL scripts used to create the tariff database and populate it with freight rates are in the [`sql/`](./sql) folder:
+
+| File | Description |
+|------|-------------|
+| [`01_create_tables.sql`](./sql/01_create_tables.sql) | Creates the `freight_tariffs` table |
+| [`02_insert_data.sql`](./sql/02_insert_data.sql) | Inserts sample freight rates for different routes and container types |
+
+## VBA Macro
+
+The VBA macro that connects Excel to MySQL and calculates freight rates is in the [`vba/`](./vba) folder:
+
+| File | Description |
+|------|-------------|
+| [`03_calculation_macro_vba.bas`](./vba/03_calculation_macro_vba.bas) | VBA code for automated quotation, margin scoring, and PDF export |
+
 ---
 ---
 
-# Автоматический калькулятор фрахта и система оценки лидов (Excel VBA + MySQL)
+# Автоматический калькулятор фрахта (Excel VBA + MySQL)
 
 ## Обзор проекта
-Интерактивное автоматизированное рабочее место для менеджеров по продажам и экспедиторов, позволяющее мгновенно рассчитывать ставки на контейнерные перевозки и оценивать прибыльность заявок. Этот инструмент устраняет разрыв между внутренними данными компании и взаимодействием с клиентами, заменяя ручной поиск ставок одной кнопкой.
+Интерактивное автоматизированное рабочее место для менеджеров по продажам и экспедиторов, позволяющее мгновенно рассчитывать ставки на контейнерные перевозки и оценить прибыльность заявок. Этот инструмент устраняет разрыв между внутренними данными компании и взаимодействием с клиентами, заменяя ручной поиск ставок одной кнопкой.
 
 [Скачать Freight_Quotation_Tool (.xlsm)](./Freight_Quotation_Tool.xlsm) 
 
@@ -41,7 +59,7 @@ Manual quotation workflows typically cost freight forwarders 15–20 minutes per
 Ручной процесс расчёта котировок обычно занимает у экспедиторов 15–20 минут на один запрос, что ведёт к ошибкам и задержкам в ответах клиентам. Этот инструмент сокращает время расчёта до **менее чем 0.1 секунды**, автоматически проверяет вводимые параметры, оценивает маржинальность сделки и экспортирует готовое, защищённое коммерческое предложение в PDF прямо на рабочий стол.
 
 ## Техническая архитектура и интеграция с бэкендом
-* **Источник данных:** Ставки надёжно хранятся в центральной базе данных MySQL (`freight_tariffs`), что отделяет коммерческие цены от локальных Excel-файлов и повышает безопасность.
+* **Источник данных:** Ставки хранятся в центральной базе данных MySQL (`freight_tariffs`), что отделяет коммерческие цены от локальных Excel-файлов и повышает безопасность.
 * **Интеграция данных (ODBC DSN):** Excel VBA устанавливает прямое сетевое соединение с MySQL через предварительно настроенный системный DSN, что делает макрос устойчивым к различиям в разрядности ПО.
 * **Валидация данных:** Ячейки формы используют строгие выпадающие списки для исключения опечаток и ошибок при вводе городов.
 
@@ -53,9 +71,27 @@ Manual quotation workflows typically cost freight forwarders 15–20 minutes per
   <img src="./02_calculated_lead_score.png" width="700">
 </p>
 
-4. **Защита конфиденциальности:** Чтобы предотвратить случайное разглашение внутренней маржи или себестоимости, скрипт экспорта выделяет и выводит в PDF **только финальную цену для клиента ($3,700)**, обеспечивая полную коммерческую тайну.
+3. **Защита конфиденциальности:** Чтобы предотвратить случайное разглашение внутренней маржи или себестоимости, скрипт экспорта выделяет и выводит в PDF **только финальную цену для клиента ($3,700)**, обеспечивая полную коммерческую тайну.
 
    <p align="center">
   <img src="./04_generated_pdf_quotation.png" width="600">
 </p>
+
+
+## SQL-скрипты
+
+Все SQL-скрипты для создания базы данных с тарифами и их заполнения находятся в папке [`sql/`](./sql):
+
+| Файл | Описание |
+|------|----------|
+| [`01_create_tables.sql`](./sql/01_create_tables.sql) | Создание таблицы `freight_tariffs` |
+| [`02_insert_data.sql`](./sql/02_insert_data.sql) | Вставка примеров тарифов по маршрутам и типам контейнеров |
+
+## VBA-макрос
+
+VBA-макрос, который подключает Excel к MySQL и рассчитывает стоимость фрахта, находится в папке [`vba/`](./vba):
+
+| Файл | Описание |
+|------|----------|
+| [`03_calculation_macro_vba.bas`](./vba/03_calculation_macro_vba.bas) | VBA-код для автоматического расчёта котировки, скоринга маржи и экспорта в PDF |
    
